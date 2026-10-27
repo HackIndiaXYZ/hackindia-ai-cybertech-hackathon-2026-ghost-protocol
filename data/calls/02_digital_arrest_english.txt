@@ -1,0 +1,13 @@
+﻿# call_start: 2026-10-27T15:00:00+05:30
+Operator: 1930 cyber crime helpline, how can I help you?
+Victim: Hello, my name is Meera Iyer. I have been cheated of two and a half lakh rupees. Please help me.
+Operator: Please stay calm. Tell me what happened.
+Victim: Yesterday around 7 in the evening I got a video call. The man said he was from the CBI and a parcel in my name had drugs in it. He kept me on the call and said I was under digital arrest.
+Operator: And the money?
+Victim: He forced me to transfer 2.5 lakh rupees through net banking from my ICICI Bank account.
+Operator: Do you know where the money went?
+Victim: The account number he gave was 50100098765432 in HDFC Bank.
+Operator: Do you have the transaction reference?
+Victim: Yes, the UTR is 412398765432. My mobile number is 9000022222.
+Operator: Do you have any proof?
+Victim: I have screenshots of the video call and the bank SMS.

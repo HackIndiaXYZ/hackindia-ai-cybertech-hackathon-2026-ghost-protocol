@@ -73,7 +73,7 @@ RULES
 def call_model(transcript: str, call_start: datetime) -> Extraction:
     client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
     response = client.models.generate_content(
-        model=os.environ.get("GEMINI_MODEL", "gemini-2.5-flash"),
+        model=os.environ.get("GEMINI_MODEL", "gemini-3.8-flash"),
         contents=f"Call start time: {call_start.isoformat()}\n\nTRANSCRIPT:\n{transcript}",
         config=types.GenerateContentConfig(
             system_instruction=SYSTEM_PROMPT,
@@ -87,7 +87,7 @@ def call_model(transcript: str, call_start: datetime) -> Extraction:
 
 def _norm(text: str) -> str:
     """Lowercase, drop punctuation, collapse spaces - for comparing quotes."""
-    return re.sub(r"\s+", " ", re.sub(r"[^\w\s]", "", text.lower())).strip()
+    return re.sub(r"\s+", " ", re.sub(r"[^\w\s\u0900-\u0963\u0966-\u097f]", "", text.lower())).strip()
 
 
 def _clean_value(name: str, raw: str):
@@ -148,3 +148,6 @@ def build_ticket(extraction: Extraction, transcript: str) -> tuple[Ticket, list[
 def extract(transcript: str, call_start: datetime) -> tuple[Ticket, list[str]]:
     """Transcript so far -> (ticket, rejected facts). Call again as new lines arrive."""
     return build_ticket(call_model(transcript, call_start), transcript)
+
+
+

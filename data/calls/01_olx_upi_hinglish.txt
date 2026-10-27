@@ -1,0 +1,13 @@
+﻿# call_start: 2026-10-27T11:30:00+05:30
+Operator: Namaste, 1930 cyber crime helpline. Aapka naam bataiye.
+Victim: Sir mera naam Rakesh Verma hai. Mere saath fraud ho gaya, please jaldi madad karo.
+Operator: Shaant rahiye, poori baat bataiye.
+Victim: Maine OLX pe sofa becha tha. Ek aadmi ne bola advance bhej raha hoon, usne mujhe link bheja aur bola PIN daalo tab paise aayenge.
+Operator: Phir kya hua?
+Victim: Maine PIN daala aur mere account se 48 hazaar kat gaye. Ye abhi 20 minute pehle hua.
+Operator: Aapka bank kaunsa hai aur payment kaise gaya?
+Victim: SBI hai sir, UPI se gaya. Account ke last chaar digit 4821 hain.
+Operator: Jisko paise gaye, uski koi detail hai?
+Victim: Uska UPI ID buyer.sofa42@okaxis tha aur phone number 9000011111.
+Operator: Transaction ID ya UTR number mil sakta hai?
+Victim: Sir woh mujhe abhi nahi mil raha, app mein dhundhna padega.
