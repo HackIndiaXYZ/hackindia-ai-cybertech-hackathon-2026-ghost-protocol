@@ -78,7 +78,7 @@ function Row({ fieldKey, field, missing }: { fieldKey: Key; field: Extracted<unk
 export default function TicketPanel({ snap }: { snap: Snapshot | null }) {
   const missing = snap?.missing ?? [];
   return (
-    <section className="h-[calc(100vh-9rem)] overflow-y-auto rounded-xl border border-slate-200 bg-white shadow-sm">
+    <section className="h-[calc(100vh-15rem)] overflow-y-auto rounded-xl border border-slate-200 bg-white shadow-sm">
       <div className="sticky top-0 flex items-center justify-between border-b border-slate-200 bg-white px-4 py-3">
         <h2 className="font-semibold">Live complaint ticket</h2>
         {snap &&
@@ -113,3 +113,4 @@ export default function TicketPanel({ snap }: { snap: Snapshot | null }) {
     </section>
   );
 }
+

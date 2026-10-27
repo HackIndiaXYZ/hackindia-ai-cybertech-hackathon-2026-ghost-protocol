@@ -35,7 +35,7 @@ export default function TranscriptPanel({ lines, busy, playing, onSend, onPlay, 
   }
 
   return (
-    <section className="flex h-[calc(100vh-9rem)] flex-col rounded-xl border border-slate-200 bg-white shadow-sm">
+    <section className="flex h-[calc(100vh-15rem)] flex-col rounded-xl border border-slate-200 bg-white shadow-sm">
       <div className="flex items-center justify-between border-b border-slate-200 px-4 py-3">
         <h2 className="font-semibold">Call transcript</h2>
         <div className="flex gap-2">
@@ -102,3 +102,4 @@ export default function TranscriptPanel({ lines, busy, playing, onSend, onPlay, 
     </section>
   );
 }
+

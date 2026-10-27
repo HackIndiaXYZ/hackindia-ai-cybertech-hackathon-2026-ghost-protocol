@@ -11,7 +11,7 @@ export interface Snapshot {
   missing: string[];
   ready: boolean;
   error?: string | null;
-  rejected?: string[];
+  rejected?: string[]; next_question?: NextQuestion | null; triage?: Triage; clock?: Clock | null;
 }
 
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
@@ -37,3 +37,20 @@ export const addLine = (caseId: string, speaker: Speaker, text: string) =>
 
 export const deleteCase = (caseId: string) =>
   request<void>(`/cases/${caseId}`, { method: "DELETE" });
+
+export interface NextQuestion {
+  field: string;
+  english: string;
+  hinglish: string;
+}
+
+export interface Triage {
+  level: "pending" | "critical" | "high" | "standard";
+  reason: string;
+}
+
+export interface Clock {
+  incident_at: string;
+  deadline_at: string;
+}
+

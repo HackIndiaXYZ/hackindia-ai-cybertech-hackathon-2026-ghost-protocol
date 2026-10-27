@@ -1,4 +1,4 @@
-﻿"""GoldenHour Desk API. Concept prototype - synthetic data."""
+"""GoldenHour Desk API. Concept prototype - synthetic data."""
 import asyncio
 import json
 import os
@@ -13,6 +13,7 @@ from pydantic import BaseModel
 
 from app.db import Base, CaseRow, LineRow, SessionLocal, engine
 from app.extractor import IST, extract
+from app.guidance import guidance
 from app.missing import is_ready, missing_fields
 from app.privacy import redact
 from app.schema import Ticket
@@ -48,7 +49,7 @@ def snapshot(row: CaseRow) -> dict:
         "version": row.version,
         "ticket": ticket.model_dump(mode="json"),
         "missing": missing_fields(ticket),
-        "ready": is_ready(ticket),
+        "ready": is_ready(ticket), **guidance(ticket.model_dump(mode="json"), missing_fields(ticket), row.call_start),
     }
 
 
@@ -130,3 +131,4 @@ def delete_case(case_id: str):
         db.delete(row)  # lines go with it
         db.commit()
     RAW.pop(case_id, None)
+

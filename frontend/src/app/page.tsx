@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import GuidanceBar from "@/components/GuidanceBar";
 import TicketPanel from "@/components/TicketPanel";
 import TranscriptPanel, { type Line } from "@/components/TranscriptPanel";
 import { API, addLine, createCase, deleteCase, type Snapshot, type Speaker } from "@/lib/api";
@@ -108,6 +109,8 @@ export default function Home() {
         <div className="mx-4 mt-3 rounded-md bg-amber-50 px-3 py-2 text-sm text-amber-900">{friendlyError}</div>
       )}
 
+      <GuidanceBar snap={snap} />
+
       <div className="grid gap-4 p-4 lg:grid-cols-2">
         <TranscriptPanel
           lines={lines}
@@ -123,3 +126,4 @@ export default function Home() {
     </main>
   );
 }
+
