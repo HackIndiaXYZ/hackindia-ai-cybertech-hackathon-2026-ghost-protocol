@@ -11,7 +11,7 @@ export interface Snapshot {
   missing: string[];
   ready: boolean;
   error?: string | null;
-  rejected?: string[]; next_question?: NextQuestion | null; triage?: Triage; clock?: Clock | null;
+  rejected?: string[]; next_question?: NextQuestion | null; triage?: Triage; clock?: Clock | null; draft?: Draft;
 }
 
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
@@ -53,4 +53,20 @@ export interface Clock {
   incident_at: string;
   deadline_at: string;
 }
+
+
+export interface Draft {
+  text: string | null;
+  source: "ai" | "template" | null;
+  approved_at: string | null;
+}
+
+export const createDraft = (caseId: string) =>
+  request<Snapshot>(`/cases/${caseId}/draft`, { method: "POST" });
+
+export const approveDraft = (caseId: string, text: string) =>
+  request<Snapshot>(`/cases/${caseId}/approve`, {
+    method: "POST",
+    body: JSON.stringify({ text }),
+  });
 

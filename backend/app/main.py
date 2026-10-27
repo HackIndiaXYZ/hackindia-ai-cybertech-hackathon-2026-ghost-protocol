@@ -13,6 +13,7 @@ from pydantic import BaseModel
 
 from app.db import Base, CaseRow, LineRow, SessionLocal, engine
 from app.extractor import IST, extract
+from app.draft import make_draft
 from app.guidance import guidance
 from app.missing import is_ready, missing_fields
 from app.privacy import redact
@@ -49,7 +50,7 @@ def snapshot(row: CaseRow) -> dict:
         "version": row.version,
         "ticket": ticket.model_dump(mode="json"),
         "missing": missing_fields(ticket),
-        "ready": is_ready(ticket), **guidance(ticket.model_dump(mode="json"), missing_fields(ticket), row.call_start),
+        "ready": is_ready(ticket), "draft": {"text": row.draft_text, "source": row.draft_source, "approved_at": row.approved_at.isoformat() if row.approved_at else None}, **guidance(ticket.model_dump(mode="json"), missing_fields(ticket), row.call_start),
     }
 
 
@@ -133,3 +134,39 @@ def delete_case(case_id: str):
     RAW.pop(case_id, None)
 
 
+
+
+
+class DraftBody(BaseModel):
+    text: str
+
+
+@app.post("/cases/{case_id}/draft")
+def create_draft(case_id: str):
+    with SessionLocal() as db:
+        row = db.get(CaseRow, case_id)
+        if row is None:
+            raise HTTPException(404, "case not found")
+        if row.approved_at is not None:
+            raise HTTPException(409, "already approved")
+        ticket = Ticket.model_validate_json(row.ticket_json).model_dump(mode="json")
+        row.draft_text, row.draft_source = make_draft(ticket)
+        row.version += 1
+        db.commit()
+        return snapshot(row)
+
+
+@app.post("/cases/{case_id}/approve")
+def approve_draft(case_id: str, body: DraftBody):
+    text = body.text.strip()
+    if not text:
+        raise HTTPException(400, "empty message")
+    with SessionLocal() as db:
+        row = db.get(CaseRow, case_id)
+        if row is None:
+            raise HTTPException(404, "case not found")
+        row.draft_text = text  # the operator's edited version is what gets approved
+        row.approved_at = datetime.now(IST).replace(tzinfo=None)
+        row.version += 1
+        db.commit()
+        return snapshot(row)

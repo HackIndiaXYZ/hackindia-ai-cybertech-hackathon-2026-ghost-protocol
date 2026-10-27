@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import FollowUpCard from "@/components/FollowUpCard";
 import GuidanceBar from "@/components/GuidanceBar";
 import TicketPanel from "@/components/TicketPanel";
 import TranscriptPanel, { type Line } from "@/components/TranscriptPanel";
@@ -123,9 +124,11 @@ export default function Home() {
         />
         <TicketPanel snap={snap} />
       </div>
+      <FollowUpCard snap={snap} />
     </main>
   );
 }
+
 
 
 
