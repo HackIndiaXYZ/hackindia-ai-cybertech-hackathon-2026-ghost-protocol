@@ -17,8 +17,9 @@ function fmt(ms: number): string {
 }
 
 export default function GuidanceBar({ snap }: { snap: Snapshot | null }) {
-  const [now, setNow] = useState(() => Date.now());
+  const [now, setNow] = useState<number | null>(null);
   useEffect(() => {
+    setNow(Date.now());
     const id = setInterval(() => setNow(Date.now()), 1000);
     return () => clearInterval(id);
   }, []);
@@ -26,7 +27,7 @@ export default function GuidanceBar({ snap }: { snap: Snapshot | null }) {
   if (!snap) return null;
   const q = snap.next_question;
   const tri = snap.triage;
-  const remaining = snap.clock ? new Date(snap.clock.deadline_at).getTime() - now : null;
+  const remaining = snap.clock && now !== null ? new Date(snap.clock.deadline_at).getTime() - now : null;
 
   return (
     <div className="mx-4 mt-3 grid gap-3 lg:grid-cols-[2fr_1fr_1fr]">
@@ -69,3 +70,4 @@ export default function GuidanceBar({ snap }: { snap: Snapshot | null }) {
     </div>
   );
 }
+
