@@ -1,0 +1,100 @@
+[
+ {
+  "speaker": "Operator",
+  "text": "Namaste, 1930 cyber crime helpline. Aapka naam bataiye.",
+  "ticket_json": "{\"complainant_name\":null,\"complainant_mobile\":null,\"incident_datetime\":null,\"amount_inr\":null,\"channel\":null,\"victim_bank\":null,\"victim_account_hint\":null,\"transaction_id\":null,\"beneficiary_upi_id\":null,\"beneficiary_account\":null,\"beneficiary_phone\":null,\"beneficiary_bank\":null,\"scam_type\":null,\"narrative\":null,\"evidence_available\":null}",
+  "call_start": "2026-10-27T22:35:40.586000",
+  "error": null
+ },
+ {
+  "speaker": "Victim",
+  "text": "Sir mera naam Rakesh Verma hai. Mere saath fraud ho gaya, please jaldi madad karo.",
+  "ticket_json": "{\"complainant_name\":{\"value\":\"Rakesh Verma\",\"source_quote\":\"mera naam Rakesh Verma\",\"confidence\":0.95},\"complainant_mobile\":null,\"incident_datetime\":null,\"amount_inr\":null,\"channel\":null,\"victim_bank\":null,\"victim_account_hint\":null,\"transaction_id\":null,\"beneficiary_upi_id\":null,\"beneficiary_account\":null,\"beneficiary_phone\":null,\"beneficiary_bank\":null,\"scam_type\":null,\"narrative\":null,\"evidence_available\":null}",
+  "call_start": "2026-10-27T22:35:40.586000",
+  "error": null
+ },
+ {
+  "speaker": "Operator",
+  "text": "Shaant rahiye, poori baat bataiye.",
+  "ticket_json": "{\"complainant_name\":{\"value\":\"Rakesh Verma\",\"source_quote\":\"mera naam Rakesh Verma\",\"confidence\":0.95},\"complainant_mobile\":null,\"incident_datetime\":null,\"amount_inr\":null,\"channel\":null,\"victim_bank\":null,\"victim_account_hint\":null,\"transaction_id\":null,\"beneficiary_upi_id\":null,\"beneficiary_account\":null,\"beneficiary_phone\":null,\"beneficiary_bank\":null,\"scam_type\":null,\"narrative\":null,\"evidence_available\":null}",
+  "call_start": "2026-10-27T22:35:40.586000",
+  "error": null
+ },
+ {
+  "speaker": "Victim",
+  "text": "Maine OLX pe sofa becha tha. Ek aadmi ne bola advance bhej raha hoon, usne mujhe link bheja aur bola PIN daalo tab paise aayenge.",
+  "ticket_json": "{\"complainant_name\":{\"value\":\"Rakesh Verma\",\"source_quote\":\"mera naam Rakesh Verma\",\"confidence\":0.95},\"complainant_mobile\":null,\"incident_datetime\":null,\"amount_inr\":null,\"channel\":null,\"victim_bank\":null,\"victim_account_hint\":null,\"transaction_id\":null,\"beneficiary_upi_id\":null,\"beneficiary_account\":null,\"beneficiary_phone\":null,\"beneficiary_bank\":null,\"scam_type\":{\"value\":\"upi_refund\",\"source_quote\":\"PIN daalo tab paise aayenge\",\"confidence\":0.9},\"narrative\":{\"value\":\"Victim sold sofa on OLX. Buyer sent a link asking to enter PIN for advance payment.\",\"source_quote\":\"OLX pe sofa becha tha\",\"confidence\":0.85},\"evidence_available\":{\"value\":[\"payment link\"],\"source_quote\":\"link bheja\",\"confidence\":0.85}}",
+  "call_start": "2026-10-27T22:35:40.586000",
+  "error": null
+ },
+ {
+  "speaker": "Operator",
+  "text": "Phir kya hua?",
+  "ticket_json": "{\"complainant_name\":{\"value\":\"Rakesh Verma\",\"source_quote\":\"mera naam Rakesh Verma\",\"confidence\":0.95},\"complainant_mobile\":null,\"incident_datetime\":null,\"amount_inr\":null,\"channel\":null,\"victim_bank\":null,\"victim_account_hint\":null,\"transaction_id\":null,\"beneficiary_upi_id\":null,\"beneficiary_account\":null,\"beneficiary_phone\":null,\"beneficiary_bank\":null,\"scam_type\":{\"value\":\"upi_refund\",\"source_quote\":\"PIN daalo tab paise aayenge\",\"confidence\":0.9},\"narrative\":{\"value\":\"Victim sold sofa on OLX. Buyer sent a link asking to enter PIN for advance payment.\",\"source_quote\":\"OLX pe sofa becha tha\",\"confidence\":0.85},\"evidence_available\":{\"value\":[\"payment link\"],\"source_quote\":\"link bheja\",\"confidence\":0.85}}",
+  "call_start": "2026-10-27T22:35:40.586000",
+  "error": null
+ },
+ {
+  "speaker": "Victim",
+  "text": "Maine PIN daala aur mere account se 48 hazaar kat gaye. Ye abhi 20 minute pehle hua.",
+  "ticket_json": "{\"complainant_name\":{\"value\":\"Rakesh Verma\",\"source_quote\":\"mera naam Rakesh Verma\",\"confidence\":0.95},\"complainant_mobile\":null,\"incident_datetime\":{\"value\":\"2026-10-27T22:15:40.586000+05:30\",\"source_quote\":\"20 minute pehle\",\"confidence\":0.9},\"amount_inr\":{\"value\":48000.0,\"source_quote\":\"48 hazaar\",\"confidence\":0.95},\"channel\":null,\"victim_bank\":null,\"victim_account_hint\":null,\"transaction_id\":null,\"beneficiary_upi_id\":null,\"beneficiary_account\":null,\"beneficiary_phone\":null,\"beneficiary_bank\":null,\"scam_type\":{\"value\":\"upi_refund\",\"source_quote\":\"PIN daalo tab paise aayenge\",\"confidence\":0.9},\"narrative\":{\"value\":\"Victim sold sofa on OLX. Buyer sent a link asking to enter PIN for advance, and Rs 48,000 got debited 20 minutes ago.\",\"source_quote\":\"OLX pe sofa becha tha\",\"confidence\":0.85},\"evidence_available\":{\"value\":[\"payment link\"],\"source_quote\":\"link bheja\",\"confidence\":0.85}}",
+  "call_start": "2026-10-27T22:35:40.586000",
+  "error": null
+ },
+ {
+  "speaker": "Operator",
+  "text": "Aapka bank kaunsa hai aur payment kaise gaya?",
+  "ticket_json": "{\"complainant_name\":{\"value\":\"Rakesh Verma\",\"source_quote\":\"mera naam Rakesh Verma\",\"confidence\":0.95},\"complainant_mobile\":null,\"incident_datetime\":{\"value\":\"2026-10-27T22:15:40.586000+05:30\",\"source_quote\":\"20 minute pehle\",\"confidence\":0.9},\"amount_inr\":{\"value\":48000.0,\"source_quote\":\"48 hazaar\",\"confidence\":0.95},\"channel\":null,\"victim_bank\":null,\"victim_account_hint\":null,\"transaction_id\":null,\"beneficiary_upi_id\":null,\"beneficiary_account\":null,\"beneficiary_phone\":null,\"beneficiary_bank\":null,\"scam_type\":{\"value\":\"upi_refund\",\"source_quote\":\"PIN daalo tab paise aayenge\",\"confidence\":0.9},\"narrative\":{\"value\":\"Victim sold sofa on OLX. Buyer sent a link asking to enter PIN for advance, and Rs 48,000 got debited 20 minutes ago.\",\"source_quote\":\"OLX pe sofa becha tha\",\"confidence\":0.85},\"evidence_available\":{\"value\":[\"payment link\"],\"source_quote\":\"link bheja\",\"confidence\":0.85}}",
+  "call_start": "2026-10-27T22:35:40.586000",
+  "error": null
+ },
+ {
+  "speaker": "Victim",
+  "text": "SBI hai sir, UPI se gaya. Account ke last chaar digit 4821 hain.",
+  "ticket_json": "{\"complainant_name\":{\"value\":\"Rakesh Verma\",\"source_quote\":\"mera naam Rakesh Verma\",\"confidence\":0.95},\"complainant_mobile\":null,\"incident_datetime\":{\"value\":\"2026-10-27T22:15:40.586000+05:30\",\"source_quote\":\"20 minute pehle\",\"confidence\":0.9},\"amount_inr\":{\"value\":48000.0,\"source_quote\":\"48 hazaar\",\"confidence\":0.95},\"channel\":{\"value\":\"upi\",\"source_quote\":\"UPI se gaya\",\"confidence\":0.95},\"victim_bank\":{\"value\":\"SBI\",\"source_quote\":\"SBI\",\"confidence\":0.95},\"victim_account_hint\":{\"value\":\"4821\",\"source_quote\":\"last chaar digit 4821\",\"confidence\":0.9},\"transaction_id\":null,\"beneficiary_upi_id\":null,\"beneficiary_account\":null,\"beneficiary_phone\":null,\"beneficiary_bank\":null,\"scam_type\":{\"value\":\"upi_refund\",\"source_quote\":\"PIN daalo tab paise aayenge\",\"confidence\":0.9},\"narrative\":{\"value\":\"Victim sold sofa on OLX. Buyer sent a link asking to enter PIN for advance, and Rs 48,000 got debited from SBI account ending 4821 via UPI.\",\"source_quote\":\"OLX pe sofa becha tha\",\"confidence\":0.85},\"evidence_available\":{\"value\":[\"payment link\"],\"source_quote\":\"link bheja\",\"confidence\":0.85}}",
+  "call_start": "2026-10-27T22:35:40.586000",
+  "error": null
+ },
+ {
+  "speaker": "Operator",
+  "text": "Jisko paise gaye, uski koi detail hai?",
+  "ticket_json": "{\"complainant_name\":{\"value\":\"Rakesh Verma\",\"source_quote\":\"mera naam Rakesh Verma\",\"confidence\":0.95},\"complainant_mobile\":null,\"incident_datetime\":{\"value\":\"2026-10-27T22:15:40.586000+05:30\",\"source_quote\":\"20 minute pehle\",\"confidence\":0.9},\"amount_inr\":{\"value\":48000.0,\"source_quote\":\"48 hazaar\",\"confidence\":0.95},\"channel\":{\"value\":\"upi\",\"source_quote\":\"UPI se gaya\",\"confidence\":0.95},\"victim_bank\":{\"value\":\"SBI\",\"source_quote\":\"SBI\",\"confidence\":0.95},\"victim_account_hint\":{\"value\":\"4821\",\"source_quote\":\"last chaar digit 4821\",\"confidence\":0.9},\"transaction_id\":null,\"beneficiary_upi_id\":null,\"beneficiary_account\":null,\"beneficiary_phone\":null,\"beneficiary_bank\":null,\"scam_type\":{\"value\":\"upi_refund\",\"source_quote\":\"PIN daalo tab paise aayenge\",\"confidence\":0.9},\"narrative\":{\"value\":\"Victim sold sofa on OLX. Buyer sent a link asking to enter PIN for advance, and Rs 48,000 got debited from SBI account ending 4821 via UPI.\",\"source_quote\":\"OLX pe sofa becha tha\",\"confidence\":0.85},\"evidence_available\":{\"value\":[\"payment link\"],\"source_quote\":\"link bheja\",\"confidence\":0.85}}",
+  "call_start": "2026-10-27T22:35:40.586000",
+  "error": null
+ },
+ {
+  "speaker": "Victim",
+  "text": "Uska UPI ID buyer.sofa42@okaxis tha aur phone number 9000011111.",
+  "ticket_json": "{\"complainant_name\":{\"value\":\"Rakesh Verma\",\"source_quote\":\"mera naam Rakesh Verma\",\"confidence\":0.95},\"complainant_mobile\":null,\"incident_datetime\":{\"value\":\"2026-10-27T22:15:40.586000+05:30\",\"source_quote\":\"20 minute pehle\",\"confidence\":0.9},\"amount_inr\":{\"value\":48000.0,\"source_quote\":\"48 hazaar\",\"confidence\":0.95},\"channel\":{\"value\":\"upi\",\"source_quote\":\"UPI se gaya\",\"confidence\":0.95},\"victim_bank\":{\"value\":\"SBI\",\"source_quote\":\"SBI\",\"confidence\":0.95},\"victim_account_hint\":{\"value\":\"4821\",\"source_quote\":\"last chaar digit 4821\",\"confidence\":0.9},\"transaction_id\":null,\"beneficiary_upi_id\":{\"value\":\"buyer.sofa42@okaxis\",\"source_quote\":\"buyer.sofa42@okaxis\",\"confidence\":0.95},\"beneficiary_account\":null,\"beneficiary_phone\":{\"value\":\"9000011111\",\"source_quote\":\"9000011111\",\"confidence\":0.95},\"beneficiary_bank\":{\"value\":\"Axis Bank\",\"source_quote\":\"okaxis\",\"confidence\":0.85},\"scam_type\":{\"value\":\"upi_refund\",\"source_quote\":\"PIN daalo tab paise aayenge\",\"confidence\":0.9},\"narrative\":{\"value\":\"Victim sold sofa on OLX. Buyer sent a link asking to enter PIN for advance. Rs 48,000 was debited to buyer.sofa42@okaxis (9000011111).\",\"source_quote\":\"OLX pe sofa becha tha\",\"confidence\":0.85},\"evidence_available\":{\"value\":[\"payment link\",\"fraudster UPI ID\"],\"source_quote\":\"link bheja\",\"confidence\":0.85}}",
+  "call_start": "2026-10-27T22:35:40.586000",
+  "error": null
+ },
+ {
+  "speaker": "Operator",
+  "text": "Transaction ID ya UTR number mil sakta hai?",
+  "ticket_json": "{\"complainant_name\":{\"value\":\"Rakesh Verma\",\"source_quote\":\"mera naam Rakesh Verma\",\"confidence\":0.95},\"complainant_mobile\":null,\"incident_datetime\":{\"value\":\"2026-10-27T22:15:40.586000+05:30\",\"source_quote\":\"20 minute pehle\",\"confidence\":0.9},\"amount_inr\":{\"value\":48000.0,\"source_quote\":\"48 hazaar\",\"confidence\":0.95},\"channel\":{\"value\":\"upi\",\"source_quote\":\"UPI se gaya\",\"confidence\":0.95},\"victim_bank\":{\"value\":\"SBI\",\"source_quote\":\"SBI\",\"confidence\":0.95},\"victim_account_hint\":{\"value\":\"4821\",\"source_quote\":\"last chaar digit 4821\",\"confidence\":0.9},\"transaction_id\":null,\"beneficiary_upi_id\":{\"value\":\"buyer.sofa42@okaxis\",\"source_quote\":\"buyer.sofa42@okaxis\",\"confidence\":0.95},\"beneficiary_account\":null,\"beneficiary_phone\":{\"value\":\"9000011111\",\"source_quote\":\"9000011111\",\"confidence\":0.95},\"beneficiary_bank\":{\"value\":\"Axis Bank\",\"source_quote\":\"okaxis\",\"confidence\":0.85},\"scam_type\":{\"value\":\"upi_refund\",\"source_quote\":\"PIN daalo tab paise aayenge\",\"confidence\":0.9},\"narrative\":{\"value\":\"Victim sold sofa on OLX. Buyer sent a link asking to enter PIN for advance. Rs 48,000 was debited to buyer.sofa42@okaxis (9000011111).\",\"source_quote\":\"OLX pe sofa becha tha\",\"confidence\":0.85},\"evidence_available\":{\"value\":[\"payment link\",\"fraudster UPI ID\"],\"source_quote\":\"link bheja\",\"confidence\":0.85}}",
+  "call_start": "2026-10-27T22:35:40.586000",
+  "error": null
+ },
+ {
+  "speaker": "Victim",
+  "text": "Sir woh mujhe abhi nahi mil raha, app mein dhundhna padega.",
+  "ticket_json": "{\"complainant_name\":{\"value\":\"Rakesh Verma\",\"source_quote\":\"mera naam Rakesh Verma\",\"confidence\":0.95},\"complainant_mobile\":null,\"incident_datetime\":{\"value\":\"2026-10-27T22:15:40.586000+05:30\",\"source_quote\":\"20 minute pehle\",\"confidence\":0.9},\"amount_inr\":{\"value\":48000.0,\"source_quote\":\"48 hazaar\",\"confidence\":0.95},\"channel\":{\"value\":\"upi\",\"source_quote\":\"UPI se gaya\",\"confidence\":0.95},\"victim_bank\":{\"value\":\"SBI\",\"source_quote\":\"SBI\",\"confidence\":0.95},\"victim_account_hint\":{\"value\":\"4821\",\"source_quote\":\"last chaar digit 4821\",\"confidence\":0.9},\"transaction_id\":null,\"beneficiary_upi_id\":{\"value\":\"buyer.sofa42@okaxis\",\"source_quote\":\"buyer.sofa42@okaxis\",\"confidence\":0.95},\"beneficiary_account\":null,\"beneficiary_phone\":{\"value\":\"9000011111\",\"source_quote\":\"9000011111\",\"confidence\":0.95},\"beneficiary_bank\":{\"value\":\"Axis Bank\",\"source_quote\":\"okaxis\",\"confidence\":0.85},\"scam_type\":{\"value\":\"upi_refund\",\"source_quote\":\"PIN daalo tab paise aayenge\",\"confidence\":0.9},\"narrative\":{\"value\":\"Victim sold sofa on OLX. Buyer sent a link asking to enter PIN for advance. Rs 48,000 was debited to buyer.sofa42@okaxis (9000011111).\",\"source_quote\":\"OLX pe sofa becha tha\",\"confidence\":0.85},\"evidence_available\":{\"value\":[\"payment link\",\"fraudster UPI ID\"],\"source_quote\":\"link bheja\",\"confidence\":0.85}}",
+  "call_start": "2026-10-27T22:35:40.586000",
+  "error": null
+ },
+ {
+  "speaker": "Operator",
+  "text": "Payment app kholiye, transaction details mein 12 digit ka UTR hota hai.",
+  "ticket_json": "{\"complainant_name\":{\"value\":\"Rakesh Verma\",\"source_quote\":\"mera naam Rakesh Verma\",\"confidence\":0.95},\"complainant_mobile\":null,\"incident_datetime\":{\"value\":\"2026-10-27T22:15:40.586000+05:30\",\"source_quote\":\"20 minute pehle\",\"confidence\":0.9},\"amount_inr\":{\"value\":48000.0,\"source_quote\":\"48 hazaar\",\"confidence\":0.95},\"channel\":{\"value\":\"upi\",\"source_quote\":\"UPI se gaya\",\"confidence\":0.95},\"victim_bank\":{\"value\":\"SBI\",\"source_quote\":\"SBI\",\"confidence\":0.95},\"victim_account_hint\":{\"value\":\"4821\",\"source_quote\":\"last chaar digit 4821\",\"confidence\":0.9},\"transaction_id\":null,\"beneficiary_upi_id\":{\"value\":\"buyer.sofa42@okaxis\",\"source_quote\":\"buyer.sofa42@okaxis\",\"confidence\":0.95},\"beneficiary_account\":null,\"beneficiary_phone\":{\"value\":\"9000011111\",\"source_quote\":\"9000011111\",\"confidence\":0.95},\"beneficiary_bank\":{\"value\":\"Axis Bank\",\"source_quote\":\"okaxis\",\"confidence\":0.85},\"scam_type\":{\"value\":\"upi_refund\",\"source_quote\":\"PIN daalo tab paise aayenge\",\"confidence\":0.9},\"narrative\":{\"value\":\"Victim sold sofa on OLX. Buyer sent a link asking to enter PIN for advance. Rs 48,000 was debited to buyer.sofa42@okaxis (9000011111).\",\"source_quote\":\"OLX pe sofa becha tha\",\"confidence\":0.85},\"evidence_available\":{\"value\":[\"payment link\",\"fraudster UPI ID\"],\"source_quote\":\"link bheja\",\"confidence\":0.85}}",
+  "call_start": "2026-10-27T22:35:40.586000",
+  "error": null
+ },
+ {
+  "speaker": "Victim",
+  "text": "Haan mil gaya sir. UTR number hai 508812345678.",
+  "ticket_json": "{\"complainant_name\":{\"value\":\"Rakesh Verma\",\"source_quote\":\"mera naam Rakesh Verma\",\"confidence\":0.95},\"complainant_mobile\":null,\"incident_datetime\":{\"value\":\"2026-10-27T22:15:40.586000+05:30\",\"source_quote\":\"20 minute pehle\",\"confidence\":0.9},\"amount_inr\":{\"value\":48000.0,\"source_quote\":\"48 hazaar\",\"confidence\":0.95},\"channel\":{\"value\":\"upi\",\"source_quote\":\"UPI se gaya\",\"confidence\":0.95},\"victim_bank\":{\"value\":\"SBI\",\"source_quote\":\"SBI\",\"confidence\":0.95},\"victim_account_hint\":{\"value\":\"4821\",\"source_quote\":\"last chaar digit 4821\",\"confidence\":0.9},\"transaction_id\":{\"value\":\"508812345678\",\"source_quote\":\"508812345678\",\"confidence\":0.98},\"beneficiary_upi_id\":{\"value\":\"buyer.sofa42@okaxis\",\"source_quote\":\"buyer.sofa42@okaxis\",\"confidence\":0.95},\"beneficiary_account\":null,\"beneficiary_phone\":{\"value\":\"9000011111\",\"source_quote\":\"9000011111\",\"confidence\":0.95},\"beneficiary_bank\":{\"value\":\"Axis Bank\",\"source_quote\":\"okaxis\",\"confidence\":0.85},\"scam_type\":{\"value\":\"upi_refund\",\"source_quote\":\"PIN daalo tab paise aayenge\",\"confidence\":0.9},\"narrative\":{\"value\":\"Victim sold sofa on OLX. Buyer sent a link asking to enter PIN for advance. Rs 48,000 debited to buyer.sofa42@okaxis with UTR 508812345678.\",\"source_quote\":\"OLX pe sofa becha tha\",\"confidence\":0.85},\"evidence_available\":{\"value\":[\"payment link\",\"fraudster UPI ID\",\"UTR receipt\"],\"source_quote\":\"link bheja\",\"confidence\":0.85}}",
+  "call_start": "2026-10-27T22:35:40.586000",
+  "error": null
+ }
+]

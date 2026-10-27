@@ -2,11 +2,13 @@
 import os
 from datetime import datetime
 
+from pathlib import Path
+
 from dotenv import load_dotenv
 from sqlalchemy import ForeignKey, String, Text, create_engine
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship, sessionmaker
 
-load_dotenv()
+load_dotenv(Path(__file__).resolve().parent.parent / ".env")
 
 DATABASE_URL = os.environ.get("DATABASE_URL", "sqlite:///./goldenhour.db")
 engine = create_engine(

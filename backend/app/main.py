@@ -91,6 +91,7 @@ def add_line(case_id: str, body: NewLine):
             error = f"{type(exc).__name__}: {str(exc)[:150]}"
         row.version += 1
         db.commit()
+        record_line(row, body.speaker, body.text, error)
         return {**snapshot(row), "error": error, "rejected": rejected}
 
 
@@ -170,3 +171,59 @@ def approve_draft(case_id: str, body: DraftBody):
         row.version += 1
         db.commit()
         return snapshot(row)
+
+
+
+# ---- Record / replay of the sample call (zero Gemini calls on replay) ----
+RECORDING_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "sample_recording.json")
+_recorded: list[dict] = []
+
+
+def record_line(row: CaseRow, speaker: str, text: str, error: str | None) -> None:
+    """Only active when RECORD_SAMPLE=1. Saves the ticket after every line."""
+    if os.environ.get("RECORD_SAMPLE") != "1":
+        return
+    if row.version == 1:
+        _recorded.clear()
+    _recorded.append({
+        "speaker": speaker,
+        "text": text,
+        "ticket_json": row.ticket_json,
+        "call_start": row.call_start.isoformat(),
+        "error": error,
+    })
+    with open(RECORDING_PATH, "w", encoding="utf-8") as fh:
+        json.dump(_recorded, fh, ensure_ascii=True, indent=1)
+
+
+class ReplayLine(BaseModel):
+    index: int
+    speaker: Literal["Victim", "Operator"]
+    text: str
+
+
+@app.post("/cases/{case_id}/replay")
+def replay_line(case_id: str, body: ReplayLine):
+    from datetime import timedelta
+    if not os.path.exists(RECORDING_PATH):
+        raise HTTPException(404, "no recording yet: run the sample live once with RECORD_SAMPLE=1")
+    with open(RECORDING_PATH, encoding="utf-8") as fh:
+        rec = json.load(fh)
+    if body.index < 0 or body.index >= len(rec):
+        raise HTTPException(404, "recording has no such line")
+    entry = rec[body.index]
+    with SessionLocal() as db:
+        row = db.get(CaseRow, case_id)
+        if row is None:
+            raise HTTPException(404, "case not found")
+        ticket = json.loads(entry["ticket_json"])
+        # Shift the incident time so "20 minutes before the call" stays true today
+        delta = row.call_start - datetime.fromisoformat(entry["call_start"])
+        field = ticket.get("incident_datetime")
+        if field and field.get("value"):
+            field["value"] = (datetime.fromisoformat(field["value"]) + delta).isoformat()
+        row.ticket_json = json.dumps(ticket)
+        db.add(LineRow(case_id=case_id, speaker=body.speaker, text=redact(body.text)))
+        row.version += 1
+        db.commit()
+        return {**snapshot(row), "error": None, "rejected": []}

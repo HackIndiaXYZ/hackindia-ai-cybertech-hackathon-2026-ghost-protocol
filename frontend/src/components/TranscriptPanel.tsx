@@ -14,11 +14,12 @@ interface Props {
   playing: boolean;
   onSend: (speaker: Speaker, text: string) => void;
   onPlay: () => void;
+  onReplay: () => void;
   onStop: () => void;
   onDelete: () => void;
 }
 
-export default function TranscriptPanel({ lines, busy, playing, onSend, onPlay, onStop, onDelete }: Props) {
+export default function TranscriptPanel({ lines, busy, playing, onSend, onPlay, onReplay, onStop, onDelete }: Props) {
   const [speaker, setSpeaker] = useState<Speaker>("Victim");
   const [text, setText] = useState("");
   const endRef = useRef<HTMLDivElement>(null);
@@ -48,6 +49,7 @@ export default function TranscriptPanel({ lines, busy, playing, onSend, onPlay, 
               Play sample call
             </button>
           )}
+          <button onClick={onReplay} disabled={playing} className="rounded-md border border-blue-300 px-3 py-1.5 text-sm font-medium text-blue-700 hover:bg-blue-50 disabled:opacity-50">Replay sample</button>
           <button onClick={onDelete} className="rounded-md border border-red-300 px-3 py-1.5 text-sm font-medium text-red-700 hover:bg-red-50">
             Delete case
           </button>
@@ -102,4 +104,5 @@ export default function TranscriptPanel({ lines, busy, playing, onSend, onPlay, 
     </section>
   );
 }
+
 

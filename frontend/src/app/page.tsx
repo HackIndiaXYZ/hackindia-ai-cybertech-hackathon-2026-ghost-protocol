@@ -5,7 +5,7 @@ import FollowUpCard from "@/components/FollowUpCard";
 import GuidanceBar from "@/components/GuidanceBar";
 import TicketPanel from "@/components/TicketPanel";
 import TranscriptPanel, { type Line } from "@/components/TranscriptPanel";
-import { API, addLine, createCase, deleteCase, type Snapshot, type Speaker } from "@/lib/api";
+import { API, addLine, createCase, deleteCase, replayLine, type Snapshot, type Speaker } from "@/lib/api";
 import { SAMPLE_CALL } from "@/lib/sampleCall";
 
 const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
@@ -38,12 +38,12 @@ export default function Home() {
     return s.case_id;
   }
 
-  async function send(speaker: Speaker, text: string, callStart?: string) {
+  async function send(speaker: Speaker, text: string, callStart?: string, replayIndex?: number) {
     setBusy(true);
     try {
       const id = await ensureCase(callStart);
       setLines((l) => [...l, { speaker, text }]);
-      const s = await addLine(id, speaker, text);
+      const s = replayIndex === undefined ? await addLine(id, speaker, text) : await replayLine(id, replayIndex, speaker, text);
       setSnap(s);
       setError(s.error ?? null);
     } catch (e) {
@@ -70,16 +70,16 @@ export default function Home() {
     }
   }
 
-  async function playSample() {
+  async function playSample(replay = false) {
     await reset();
     cancelRef.current = false;
     setPlaying(true);
     const start = new Date().toISOString();
     try {
-      for (const line of SAMPLE_CALL) {
+      for (const [i, line] of SAMPLE_CALL.entries()) {
         if (cancelRef.current) break;
-        await send(line.speaker, line.text, start);
-        await sleep(3000);
+        await send(line.speaker, line.text, start, replay ? i : undefined);
+        await sleep(replay ? 800 : 3000);
       }
     } finally {
       setPlaying(false);
@@ -118,7 +118,8 @@ export default function Home() {
           busy={busy}
           playing={playing}
           onSend={send}
-          onPlay={playSample}
+          onPlay={() => playSample(false)}
+          onReplay={() => playSample(true)}
           onStop={() => (cancelRef.current = true)}
           onDelete={reset}
         />
@@ -128,6 +129,7 @@ export default function Home() {
     </main>
   );
 }
+
 
 
 

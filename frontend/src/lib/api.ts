@@ -70,3 +70,9 @@ export const approveDraft = (caseId: string, text: string) =>
     body: JSON.stringify({ text }),
   });
 
+
+export const replayLine = (caseId: string, index: number, speaker: Speaker, text: string) =>
+  request<Snapshot>(`/cases/${caseId}/replay`, {
+    method: "POST",
+    body: JSON.stringify({ index, speaker, text }),
+  });

@@ -7,6 +7,7 @@ import os
 import re
 from datetime import datetime, timedelta, timezone
 from enum import Enum
+from pathlib import Path
 
 from dotenv import load_dotenv
 from google import genai
@@ -15,7 +16,7 @@ from pydantic import BaseModel
 
 from app.schema import Ticket
 
-load_dotenv()
+load_dotenv(Path(__file__).resolve().parent.parent / ".env")
 
 IST = timezone(timedelta(hours=5, minutes=30))
 

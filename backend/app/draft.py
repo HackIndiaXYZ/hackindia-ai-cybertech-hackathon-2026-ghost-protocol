@@ -1,11 +1,12 @@
 """Follow-up draft. Built from the ticket only, never the raw transcript."""
 import os
+from pathlib import Path
 
 from dotenv import load_dotenv
 from google import genai
 from google.genai import types
 
-load_dotenv()
+load_dotenv(Path(__file__).resolve().parent.parent / ".env")
 
 POLISH_PROMPT = """You polish a follow-up message from a cyber crime helpline to a fraud victim.
 Keep every fact in the message. Add no new facts. Promise no refund, recovery or timeline.
@@ -57,7 +58,7 @@ def make_draft(ticket: dict) -> tuple[str, str]:
     try:
         client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
         response = client.models.generate_content(
-            model=os.environ.get("GEMINI_MODEL", "gemini-3-flash-preview"),
+            model=os.environ.get("GEMINI_MODEL", "gemini-3.8-flash"),
             contents=base,
             config=types.GenerateContentConfig(system_instruction=POLISH_PROMPT, temperature=0.2),
         )
