@@ -84,7 +84,7 @@ def add_line(case_id: str, body: NewLine):
 
         error, rejected = None, []
         try:
-            ticket, rejected = extract("\n".join(RAW[case_id]), row.call_start.replace(tzinfo=IST))
+            ticket, rejected = (Ticket.model_validate_json(row.ticket_json), []) if body.speaker == "Operator" else extract("\n".join(RAW[case_id]), row.call_start.replace(tzinfo=IST))
             row.ticket_json = ticket.model_dump_json()
         except Exception as exc:  # e.g. Gemini 503: keep the old ticket, tell the UI
             error = f"{type(exc).__name__}: {str(exc)[:150]}"
@@ -131,4 +131,5 @@ def delete_case(case_id: str):
         db.delete(row)  # lines go with it
         db.commit()
     RAW.pop(case_id, None)
+
 

@@ -78,7 +78,7 @@ export default function Home() {
       for (const line of SAMPLE_CALL) {
         if (cancelRef.current) break;
         await send(line.speaker, line.text, start);
-        await sleep(500);
+        await sleep(3000);
       }
     } finally {
       setPlaying(false);
@@ -126,4 +126,6 @@ export default function Home() {
     </main>
   );
 }
+
+
 
