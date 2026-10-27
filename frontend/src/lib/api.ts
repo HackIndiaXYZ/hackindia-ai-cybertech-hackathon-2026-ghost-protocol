@@ -49,9 +49,17 @@ export interface Triage {
   reason: string;
 }
 
+export interface RbiWindow {
+  days_elapsed: number;
+  tier: "zero_liability" | "limited_liability" | "beyond_7_days";
+  text: string;
+  caution: string;
+}
+
 export interface Clock {
   incident_at: string;
   deadline_at: string;
+  rbi_window?: RbiWindow;
 }
 
 
@@ -71,8 +79,8 @@ export const approveDraft = (caseId: string, text: string) =>
   });
 
 
-export const replayLine = (caseId: string, index: number, speaker: Speaker, text: string) =>
+export const replayLine = (caseId: string, index: number, speaker: Speaker, text: string, scenarioId?: string) =>
   request<Snapshot>(`/cases/${caseId}/replay`, {
     method: "POST",
-    body: JSON.stringify({ index, speaker, text }),
+    body: JSON.stringify({ index, speaker, text, scenario_id: scenarioId }),
   });

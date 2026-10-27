@@ -200,14 +200,20 @@ class ReplayLine(BaseModel):
     index: int
     speaker: Literal["Victim", "Operator"]
     text: str
+    scenario_id: str | None = None
 
 
 @app.post("/cases/{case_id}/replay")
 def replay_line(case_id: str, body: ReplayLine):
     from datetime import timedelta
-    if not os.path.exists(RECORDING_PATH):
+    recording_file = RECORDING_PATH
+    if body.scenario_id in ("digital_arrest", "fake_job"):
+        custom_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", f"sample_recording_{body.scenario_id}.json")
+        if os.path.exists(custom_path):
+            recording_file = custom_path
+    if not os.path.exists(recording_file):
         raise HTTPException(404, "no recording yet: run the sample live once with RECORD_SAMPLE=1")
-    with open(RECORDING_PATH, encoding="utf-8") as fh:
+    with open(recording_file, encoding="utf-8") as fh:
         rec = json.load(fh)
     if body.index < 0 or body.index >= len(rec):
         raise HTTPException(404, "recording has no such line")
@@ -218,10 +224,12 @@ def replay_line(case_id: str, body: ReplayLine):
             raise HTTPException(404, "case not found")
         ticket = json.loads(entry["ticket_json"])
         # Shift the incident time so "20 minutes before the call" stays true today
-        delta = row.call_start - datetime.fromisoformat(entry["call_start"])
+        entry_start = datetime.fromisoformat(entry["call_start"]).replace(tzinfo=None)
+        delta = row.call_start - entry_start
         field = ticket.get("incident_datetime")
         if field and field.get("value"):
-            field["value"] = (datetime.fromisoformat(field["value"]) + delta).isoformat()
+            inc_dt = datetime.fromisoformat(field["value"]).replace(tzinfo=None)
+            field["value"] = (inc_dt + delta).isoformat()
         row.ticket_json = json.dumps(ticket)
         db.add(LineRow(case_id=case_id, speaker=body.speaker, text=redact(body.text)))
         row.version += 1

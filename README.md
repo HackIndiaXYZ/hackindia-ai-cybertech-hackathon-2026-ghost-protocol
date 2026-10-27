@@ -182,5 +182,8 @@ pytest tests/test_extractor.py tests/test_schema.py tests/test_missing.py tests/
 ---
 
 ## 👥 Team: Ghost Protocol
-* **Hackathon:** HackIndia AI CyberTech Hackathon 2026
+* **Members:** Tanishk, Vishesh, Priya, Suhani
+* **Hackathon:** HackIndia AI & CyberTech Hackathon 2026
+* **Tracks:** AI & AI Agents, Cybersecurity
 * **Repository:** `hackindia-ai-cybertech-hackathon-2026-ghost-protocol`
+* **Status:** Working Prototype with 15-Call Synthetic Benchmark Suite

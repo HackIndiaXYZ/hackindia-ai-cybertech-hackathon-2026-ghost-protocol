@@ -87,17 +87,39 @@ def triage(ticket: dict, call_start: datetime) -> dict:
     return {"level": "standard", "reason": "Golden hour has passed and the amount is moderate."}
 
 
-def clock(ticket: dict) -> dict | None:
+def clock(ticket: dict, current_time: datetime | None = None) -> dict | None:
     incident = _parse(_val(ticket, "incident_datetime"))
     if incident is None:
         return None
     deadline = incident + timedelta(minutes=GOLDEN_HOUR_MIN)
-    return {"incident_at": incident.isoformat(), "deadline_at": deadline.isoformat()}
+    now_dt = current_time.astimezone(IST) if current_time else datetime.now(IST)
+    days_elapsed = max(0.0, (now_dt - incident).total_seconds() / 86400.0)
+
+    if days_elapsed <= 3.0:
+        rbi_status = "zero_liability"
+        rbi_text = "Within 3-Day Window: Zero Customer Liability"
+    elif days_elapsed <= 7.0:
+        rbi_status = "limited_liability"
+        rbi_text = "Within 4–7 Day Window: Limited Customer Liability"
+    else:
+        rbi_status = "beyond_7_days"
+        rbi_text = "Beyond 7 Days: Bank Discretion Applies"
+
+    return {
+        "incident_at": incident.isoformat(),
+        "deadline_at": deadline.isoformat(),
+        "rbi_window": {
+            "days_elapsed": round(days_elapsed, 1),
+            "tier": rbi_status,
+            "text": rbi_text,
+            "caution": "RBI rules apply to unauthorised transactions. For victim-authorised payments under fraud, immediate 1930 bank lien is the primary recovery route.",
+        },
+    }
 
 
 def guidance(ticket: dict, missing: list[str], call_start: datetime) -> dict:
     return {
         "next_question": next_question(missing),
         "triage": triage(ticket, call_start),
-        "clock": clock(ticket),
+        "clock": clock(ticket, call_start),
     }

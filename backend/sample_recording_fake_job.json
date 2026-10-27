@@ -1,0 +1,100 @@
+[
+ {
+  "speaker": "Operator",
+  "text": "नमस्ते, 1930 साइबर क्राइम हेल्पलाइन। आपका नाम बताइए?",
+  "ticket_json": "{\"complainant_name\":null,\"complainant_mobile\":null,\"incident_datetime\":null,\"amount_inr\":null,\"channel\":null,\"victim_bank\":null,\"victim_account_hint\":null,\"transaction_id\":null,\"beneficiary_upi_id\":null,\"beneficiary_account\":null,\"beneficiary_phone\":null,\"beneficiary_bank\":null,\"scam_type\":null,\"narrative\":null,\"evidence_available\":null}",
+  "call_start": "2026-10-27T09:45:00+05:30",
+  "error": null
+ },
+ {
+  "speaker": "Victim",
+  "text": "मेरा नाम सुनीता देवी है। मेरे साथ ठगी हो गई है।",
+  "ticket_json": "{\"complainant_name\":{\"value\":\"सुनीता देवी\",\"source_quote\":\"मेरा नाम सुनीता देवी है\",\"confidence\":0.98},\"complainant_mobile\":null,\"incident_datetime\":null,\"amount_inr\":null,\"channel\":null,\"victim_bank\":null,\"victim_account_hint\":null,\"transaction_id\":null,\"beneficiary_upi_id\":null,\"beneficiary_account\":null,\"beneficiary_phone\":null,\"beneficiary_bank\":null,\"scam_type\":null,\"narrative\":null,\"evidence_available\":null}",
+  "call_start": "2026-10-27T09:45:00+05:30",
+  "error": null
+ },
+ {
+  "speaker": "Operator",
+  "text": "घबराइए मत, पूरी बात बताइए।",
+  "ticket_json": "{\"complainant_name\":{\"value\":\"सुनीता देवी\",\"source_quote\":\"मेरा नाम सुनीता देवी है\",\"confidence\":0.98},\"complainant_mobile\":null,\"incident_datetime\":null,\"amount_inr\":null,\"channel\":null,\"victim_bank\":null,\"victim_account_hint\":null,\"transaction_id\":null,\"beneficiary_upi_id\":null,\"beneficiary_account\":null,\"beneficiary_phone\":null,\"beneficiary_bank\":null,\"scam_type\":null,\"narrative\":null,\"evidence_available\":null}",
+  "call_start": "2026-10-27T09:45:00+05:30",
+  "error": null
+ },
+ {
+  "speaker": "Victim",
+  "text": "टेलीग्राम पर पार्ट टाइम जॉब का मैसेज आया था। उन्होंने रजिस्ट्रेशन फीस के नाम पर पैसे मंगवाए।",
+  "ticket_json": "{\"complainant_name\":{\"value\":\"सुनीता देवी\",\"source_quote\":\"मेरा नाम सुनीता देवी है\",\"confidence\":0.98},\"complainant_mobile\":null,\"incident_datetime\":null,\"amount_inr\":null,\"channel\":null,\"victim_bank\":null,\"victim_account_hint\":null,\"transaction_id\":null,\"beneficiary_upi_id\":null,\"beneficiary_account\":null,\"beneficiary_phone\":null,\"beneficiary_bank\":null,\"scam_type\":{\"value\":\"fake_job\",\"source_quote\":\"पार्ट टाइम जॉब\",\"confidence\":0.95},\"narrative\":{\"value\":\"टेलीग्राम पर पार्ट टाइम जॉब का मैसेज भेजकर रजिस्ट्रेशन फीस के नाम पर धोखाधड़ी की गई।\",\"source_quote\":\"पार्ट टाइम जॉब\",\"confidence\":0.9},\"evidence_available\":null}",
+  "call_start": "2026-10-27T09:45:00+05:30",
+  "error": null
+ },
+ {
+  "speaker": "Operator",
+  "text": "कितने पैसे गए और कब?",
+  "ticket_json": "{\"complainant_name\":{\"value\":\"सुनीता देवी\",\"source_quote\":\"मेरा नाम सुनीता देवी है\",\"confidence\":0.98},\"complainant_mobile\":null,\"incident_datetime\":null,\"amount_inr\":null,\"channel\":null,\"victim_bank\":null,\"victim_account_hint\":null,\"transaction_id\":null,\"beneficiary_upi_id\":null,\"beneficiary_account\":null,\"beneficiary_phone\":null,\"beneficiary_bank\":null,\"scam_type\":{\"value\":\"fake_job\",\"source_quote\":\"पार्ट टाइम जॉब\",\"confidence\":0.95},\"narrative\":{\"value\":\"टेलीग्राम पर पार्ट टाइम जॉब का मैसेज भेजकर रजिस्ट्रेशन फीस के नाम पर धोखाधड़ी की गई।\",\"source_quote\":\"पार्ट टाइम जॉब\",\"confidence\":0.9},\"evidence_available\":null}",
+  "call_start": "2026-10-27T09:45:00+05:30",
+  "error": null
+ },
+ {
+  "speaker": "Victim",
+  "text": "पंद्रह हज़ार रुपये गए, लगभग दो घंटे पहले।",
+  "ticket_json": "{\"complainant_name\":{\"value\":\"सुनीता देवी\",\"source_quote\":\"मेरा नाम सुनीता देवी है\",\"confidence\":0.98},\"complainant_mobile\":null,\"incident_datetime\":{\"value\":\"2026-10-27T07:45:00+05:30\",\"source_quote\":\"दो घंटे पहले\",\"confidence\":0.9},\"amount_inr\":{\"value\":15000.0,\"source_quote\":\"पंद्रह हज़ार\",\"confidence\":0.95},\"channel\":null,\"victim_bank\":null,\"victim_account_hint\":null,\"transaction_id\":null,\"beneficiary_upi_id\":null,\"beneficiary_account\":null,\"beneficiary_phone\":null,\"beneficiary_bank\":null,\"scam_type\":{\"value\":\"fake_job\",\"source_quote\":\"पार्ट टाइम जॉब\",\"confidence\":0.95},\"narrative\":{\"value\":\"टेलीग्राम पार्ट टाइम जॉब के नाम पर ₹15,000 की ठगी की गई। घटना 2 घंटे पहले हुई।\",\"source_quote\":\"पार्ट टाइम जॉब\",\"confidence\":0.9},\"evidence_available\":null}",
+  "call_start": "2026-10-27T09:45:00+05:30",
+  "error": null
+ },
+ {
+  "speaker": "Operator",
+  "text": "पेमेंट कैसे किया और आपका बैंक कौन सा है?",
+  "ticket_json": "{\"complainant_name\":{\"value\":\"सुनीता देवी\",\"source_quote\":\"मेरा नाम सुनीता देवी है\",\"confidence\":0.98},\"complainant_mobile\":null,\"incident_datetime\":{\"value\":\"2026-10-27T07:45:00+05:30\",\"source_quote\":\"दो घंटे पहले\",\"confidence\":0.9},\"amount_inr\":{\"value\":15000.0,\"source_quote\":\"पंद्रह हज़ार\",\"confidence\":0.95},\"channel\":null,\"victim_bank\":null,\"victim_account_hint\":null,\"transaction_id\":null,\"beneficiary_upi_id\":null,\"beneficiary_account\":null,\"beneficiary_phone\":null,\"beneficiary_bank\":null,\"scam_type\":{\"value\":\"fake_job\",\"source_quote\":\"पार्ट टाइम जॉब\",\"confidence\":0.95},\"narrative\":{\"value\":\"टेलीग्राम पार्ट टाइम जॉब के नाम पर ₹15,000 की ठगी की गई। घटना 2 घंटे पहले हुई।\",\"source_quote\":\"पार्ट टाइम जॉब\",\"confidence\":0.9},\"evidence_available\":null}",
+  "call_start": "2026-10-27T09:45:00+05:30",
+  "error": null
+ },
+ {
+  "speaker": "Victim",
+  "text": "यूपीआई से किया, मेरा बैंक पंजाब नेशनल बैंक है।",
+  "ticket_json": "{\"complainant_name\":{\"value\":\"सुनीता देवी\",\"source_quote\":\"मेरा नाम सुनीता देवी है\",\"confidence\":0.98},\"complainant_mobile\":null,\"incident_datetime\":{\"value\":\"2026-10-27T07:45:00+05:30\",\"source_quote\":\"दो घंटे पहले\",\"confidence\":0.9},\"amount_inr\":{\"value\":15000.0,\"source_quote\":\"पंद्रह हज़ार\",\"confidence\":0.95},\"channel\":{\"value\":\"upi\",\"source_quote\":\"यूपीआई\",\"confidence\":0.95},\"victim_bank\":{\"value\":\"Punjab National Bank\",\"source_quote\":\"पंजाब नेशनल बैंक\",\"confidence\":0.95},\"victim_account_hint\":null,\"transaction_id\":null,\"beneficiary_upi_id\":null,\"beneficiary_account\":null,\"beneficiary_phone\":null,\"beneficiary_bank\":null,\"scam_type\":{\"value\":\"fake_job\",\"source_quote\":\"पार्ट टाइम जॉब\",\"confidence\":0.95},\"narrative\":{\"value\":\"PNB खाते से ₹15,000 UPI द्वारा टेलीग्राम जॉब फ्रॉड में ट्रांसफर किए गए।\",\"source_quote\":\"पार्ट टाइम जॉब\",\"confidence\":0.9},\"evidence_available\":null}",
+  "call_start": "2026-10-27T09:45:00+05:30",
+  "error": null
+ },
+ {
+  "speaker": "Operator",
+  "text": "जिसे पैसे भेजे उसकी कोई जानकारी है?",
+  "ticket_json": "{\"complainant_name\":{\"value\":\"सुनीता देवी\",\"source_quote\":\"मेरा नाम सुनीता देवी है\",\"confidence\":0.98},\"complainant_mobile\":null,\"incident_datetime\":{\"value\":\"2026-10-27T07:45:00+05:30\",\"source_quote\":\"दो घंटे पहले\",\"confidence\":0.9},\"amount_inr\":{\"value\":15000.0,\"source_quote\":\"पंद्रह हज़ार\",\"confidence\":0.95},\"channel\":{\"value\":\"upi\",\"source_quote\":\"यूपीआई\",\"confidence\":0.95},\"victim_bank\":{\"value\":\"Punjab National Bank\",\"source_quote\":\"पंजाब नेशनल बैंक\",\"confidence\":0.95},\"victim_account_hint\":null,\"transaction_id\":null,\"beneficiary_upi_id\":null,\"beneficiary_account\":null,\"beneficiary_phone\":null,\"beneficiary_bank\":null,\"scam_type\":{\"value\":\"fake_job\",\"source_quote\":\"पार्ट टाइम जॉब\",\"confidence\":0.95},\"narrative\":{\"value\":\"PNB खाते से ₹15,000 UPI द्वारा टेलीग्राम जॉब फ्रॉड में ट्रांसफर किए गए।\",\"source_quote\":\"पार्ट टाइम जॉब\",\"confidence\":0.9},\"evidence_available\":null}",
+  "call_start": "2026-10-27T09:45:00+05:30",
+  "error": null
+ },
+ {
+  "speaker": "Victim",
+  "text": "उसका यूपीआई आईडी jobhelp.hr@ybl था।",
+  "ticket_json": "{\"complainant_name\":{\"value\":\"सुनीता देवी\",\"source_quote\":\"मेरा नाम सुनीता देवी है\",\"confidence\":0.98},\"complainant_mobile\":null,\"incident_datetime\":{\"value\":\"2026-10-27T07:45:00+05:30\",\"source_quote\":\"दो घंटे पहले\",\"confidence\":0.9},\"amount_inr\":{\"value\":15000.0,\"source_quote\":\"पंद्रह हज़ार\",\"confidence\":0.95},\"channel\":{\"value\":\"upi\",\"source_quote\":\"यूपीआई\",\"confidence\":0.95},\"victim_bank\":{\"value\":\"Punjab National Bank\",\"source_quote\":\"पंजाब नेशनल बैंक\",\"confidence\":0.95},\"victim_account_hint\":null,\"transaction_id\":null,\"beneficiary_upi_id\":{\"value\":\"jobhelp.hr@ybl\",\"source_quote\":\"jobhelp.hr@ybl\",\"confidence\":0.98},\"beneficiary_account\":null,\"beneficiary_phone\":null,\"beneficiary_bank\":{\"value\":\"Yes Bank\",\"source_quote\":\"ybl\",\"confidence\":0.85},\"scam_type\":{\"value\":\"fake_job\",\"source_quote\":\"पार्ट टाइम जॉब\",\"confidence\":0.95},\"narrative\":{\"value\":\"PNB खाते से ₹15,000 UPI द्वारा jobhelp.hr@ybl पर फ्रॉड हुआ।\",\"source_quote\":\"पार्ट टाइम जॉब\",\"confidence\":0.9},\"evidence_available\":null}",
+  "call_start": "2026-10-27T09:45:00+05:30",
+  "error": null
+ },
+ {
+  "speaker": "Operator",
+  "text": "ट्रांजैक्शन आईडी या यूटीआर नंबर बता सकती हैं?",
+  "ticket_json": "{\"complainant_name\":{\"value\":\"सुनीता देवी\",\"source_quote\":\"मेरा नाम सुनीता देवी है\",\"confidence\":0.98},\"complainant_mobile\":null,\"incident_datetime\":{\"value\":\"2026-10-27T07:45:00+05:30\",\"source_quote\":\"दो घंटे पहले\",\"confidence\":0.9},\"amount_inr\":{\"value\":15000.0,\"source_quote\":\"पंद्रह हज़ार\",\"confidence\":0.95},\"channel\":{\"value\":\"upi\",\"source_quote\":\"यूपीआई\",\"confidence\":0.95},\"victim_bank\":{\"value\":\"Punjab National Bank\",\"source_quote\":\"पंजाब नेशनल बैंक\",\"confidence\":0.95},\"victim_account_hint\":null,\"transaction_id\":null,\"beneficiary_upi_id\":{\"value\":\"jobhelp.hr@ybl\",\"source_quote\":\"jobhelp.hr@ybl\",\"confidence\":0.98},\"beneficiary_account\":null,\"beneficiary_phone\":null,\"beneficiary_bank\":{\"value\":\"Yes Bank\",\"source_quote\":\"ybl\",\"confidence\":0.85},\"scam_type\":{\"value\":\"fake_job\",\"source_quote\":\"पार्ट टाइम जॉब\",\"confidence\":0.95},\"narrative\":{\"value\":\"PNB खाते से ₹15,000 UPI द्वारा jobhelp.hr@ybl पर फ्रॉड हुआ।\",\"source_quote\":\"पार्ट टाइम जॉब\",\"confidence\":0.9},\"evidence_available\":null}",
+  "call_start": "2026-10-27T09:45:00+05:30",
+  "error": null
+ },
+ {
+  "speaker": "Victim",
+  "text": "हाँ, यूटीआर 308712345678 है।",
+  "ticket_json": "{\"complainant_name\":{\"value\":\"सुनीता देवी\",\"source_quote\":\"मेरा नाम सुनीता देवी है\",\"confidence\":0.98},\"complainant_mobile\":null,\"incident_datetime\":{\"value\":\"2026-10-27T07:45:00+05:30\",\"source_quote\":\"दो घंटे पहले\",\"confidence\":0.9},\"amount_inr\":{\"value\":15000.0,\"source_quote\":\"पंद्रह हज़ार\",\"confidence\":0.95},\"channel\":{\"value\":\"upi\",\"source_quote\":\"यूपीआई\",\"confidence\":0.95},\"victim_bank\":{\"value\":\"Punjab National Bank\",\"source_quote\":\"पंजाब नेशनल बैंक\",\"confidence\":0.95},\"victim_account_hint\":null,\"transaction_id\":{\"value\":\"308712345678\",\"source_quote\":\"308712345678\",\"confidence\":0.98},\"beneficiary_upi_id\":{\"value\":\"jobhelp.hr@ybl\",\"source_quote\":\"jobhelp.hr@ybl\",\"confidence\":0.98},\"beneficiary_account\":null,\"beneficiary_phone\":null,\"beneficiary_bank\":{\"value\":\"Yes Bank\",\"source_quote\":\"ybl\",\"confidence\":0.85},\"scam_type\":{\"value\":\"fake_job\",\"source_quote\":\"पार्ट टाइम जॉब\",\"confidence\":0.95},\"narrative\":{\"value\":\"PNB खाते से ₹15,000 UPI द्वारा jobhelp.hr@ybl पर फ्रॉड। UTR: 308712345678.\",\"source_quote\":\"पार्ट टाइम जॉब\",\"confidence\":0.9},\"evidence_available\":null}",
+  "call_start": "2026-10-27T09:45:00+05:30",
+  "error": null
+ },
+ {
+  "speaker": "Operator",
+  "text": "आपका मोबाइल नंबर?",
+  "ticket_json": "{\"complainant_name\":{\"value\":\"सुनीता देवी\",\"source_quote\":\"मेरा नाम सुनीता देवी है\",\"confidence\":0.98},\"complainant_mobile\":null,\"incident_datetime\":{\"value\":\"2026-10-27T07:45:00+05:30\",\"source_quote\":\"दो घंटे पहले\",\"confidence\":0.9},\"amount_inr\":{\"value\":15000.0,\"source_quote\":\"पंद्रह हज़ार\",\"confidence\":0.95},\"channel\":{\"value\":\"upi\",\"source_quote\":\"यूपीआई\",\"confidence\":0.95},\"victim_bank\":{\"value\":\"Punjab National Bank\",\"source_quote\":\"पंजाब नेशनल बैंक\",\"confidence\":0.95},\"victim_account_hint\":null,\"transaction_id\":{\"value\":\"308712345678\",\"source_quote\":\"308712345678\",\"confidence\":0.98},\"beneficiary_upi_id\":{\"value\":\"jobhelp.hr@ybl\",\"source_quote\":\"jobhelp.hr@ybl\",\"confidence\":0.98},\"beneficiary_account\":null,\"beneficiary_phone\":null,\"beneficiary_bank\":{\"value\":\"Yes Bank\",\"source_quote\":\"ybl\",\"confidence\":0.85},\"scam_type\":{\"value\":\"fake_job\",\"source_quote\":\"पार्ट टाइम जॉब\",\"confidence\":0.95},\"narrative\":{\"value\":\"PNB खाते से ₹15,000 UPI द्वारा jobhelp.hr@ybl पर फ्रॉड। UTR: 308712345678.\",\"source_quote\":\"पार्ट टाइम जॉब\",\"confidence\":0.9},\"evidence_available\":null}",
+  "call_start": "2026-10-27T09:45:00+05:30",
+  "error": null
+ },
+ {
+  "speaker": "Victim",
+  "text": "9000033333",
+  "ticket_json": "{\"complainant_name\":{\"value\":\"सुनीता देवी\",\"source_quote\":\"मेरा नाम सुनीता देवी है\",\"confidence\":0.98},\"complainant_mobile\":{\"value\":\"9000033333\",\"source_quote\":\"9000033333\",\"confidence\":0.98},\"incident_datetime\":{\"value\":\"2026-10-27T07:45:00+05:30\",\"source_quote\":\"दो घंटे पहले\",\"confidence\":0.9},\"amount_inr\":{\"value\":15000.0,\"source_quote\":\"पंद्रह हज़ार\",\"confidence\":0.95},\"channel\":{\"value\":\"upi\",\"source_quote\":\"यूपीआई\",\"confidence\":0.95},\"victim_bank\":{\"value\":\"Punjab National Bank\",\"source_quote\":\"पंजाब नेशनल बैंक\",\"confidence\":0.95},\"victim_account_hint\":null,\"transaction_id\":{\"value\":\"308712345678\",\"source_quote\":\"308712345678\",\"confidence\":0.98},\"beneficiary_upi_id\":{\"value\":\"jobhelp.hr@ybl\",\"source_quote\":\"jobhelp.hr@ybl\",\"confidence\":0.98},\"beneficiary_account\":null,\"beneficiary_phone\":null,\"beneficiary_bank\":{\"value\":\"Yes Bank\",\"source_quote\":\"ybl\",\"confidence\":0.85},\"scam_type\":{\"value\":\"fake_job\",\"source_quote\":\"पार्ट टाइम जॉब\",\"confidence\":0.95},\"narrative\":{\"value\":\"PNB खाते से ₹15,000 UPI द्वारा jobhelp.hr@ybl पर फ्रॉड। UTR: 308712345678. फोन: 9000033333.\",\"source_quote\":\"पार्ट टाइम जॉब\",\"confidence\":0.9},\"evidence_available\":{\"value\":[\"टेलीग्राम चैट\",\"पेमेंट स्क्रीनशॉट\"],\"source_quote\":\"टेलीग्राम\",\"confidence\":0.85}}",
+  "call_start": "2026-10-27T09:45:00+05:30",
+  "error": null
+ }
+]

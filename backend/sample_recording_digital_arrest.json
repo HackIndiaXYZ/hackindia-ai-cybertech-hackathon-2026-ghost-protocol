@@ -1,0 +1,86 @@
+[
+ {
+  "speaker": "Operator",
+  "text": "1930 cyber crime helpline, how can I help you?",
+  "ticket_json": "{\"complainant_name\":null,\"complainant_mobile\":null,\"incident_datetime\":null,\"amount_inr\":null,\"channel\":null,\"victim_bank\":null,\"victim_account_hint\":null,\"transaction_id\":null,\"beneficiary_upi_id\":null,\"beneficiary_account\":null,\"beneficiary_phone\":null,\"beneficiary_bank\":null,\"scam_type\":null,\"narrative\":null,\"evidence_available\":null}",
+  "call_start": "2026-10-27T15:00:00+05:30",
+  "error": null
+ },
+ {
+  "speaker": "Victim",
+  "text": "Hello, my name is Meera Iyer. I have been cheated of two and a half lakh rupees. Please help me.",
+  "ticket_json": "{\"complainant_name\":{\"value\":\"Meera Iyer\",\"source_quote\":\"my name is Meera Iyer\",\"confidence\":0.98},\"complainant_mobile\":null,\"incident_datetime\":null,\"amount_inr\":{\"value\":250000.0,\"source_quote\":\"two and a half lakh\",\"confidence\":0.95},\"channel\":null,\"victim_bank\":null,\"victim_account_hint\":null,\"transaction_id\":null,\"beneficiary_upi_id\":null,\"beneficiary_account\":null,\"beneficiary_phone\":null,\"beneficiary_bank\":null,\"scam_type\":null,\"narrative\":null,\"evidence_available\":null}",
+  "call_start": "2026-10-27T15:00:00+05:30",
+  "error": null
+ },
+ {
+  "speaker": "Operator",
+  "text": "Please stay calm. Tell me what happened.",
+  "ticket_json": "{\"complainant_name\":{\"value\":\"Meera Iyer\",\"source_quote\":\"my name is Meera Iyer\",\"confidence\":0.98},\"complainant_mobile\":null,\"incident_datetime\":null,\"amount_inr\":{\"value\":250000.0,\"source_quote\":\"two and a half lakh\",\"confidence\":0.95},\"channel\":null,\"victim_bank\":null,\"victim_account_hint\":null,\"transaction_id\":null,\"beneficiary_upi_id\":null,\"beneficiary_account\":null,\"beneficiary_phone\":null,\"beneficiary_bank\":null,\"scam_type\":null,\"narrative\":null,\"evidence_available\":null}",
+  "call_start": "2026-10-27T15:00:00+05:30",
+  "error": null
+ },
+ {
+  "speaker": "Victim",
+  "text": "Yesterday around 7 in the evening I got a video call. The man said he was from the CBI and a parcel in my name had drugs in it. He kept me on the call and said I was under digital arrest.",
+  "ticket_json": "{\"complainant_name\":{\"value\":\"Meera Iyer\",\"source_quote\":\"my name is Meera Iyer\",\"confidence\":0.98},\"complainant_mobile\":null,\"incident_datetime\":{\"value\":\"2026-10-26T19:00:00+05:30\",\"source_quote\":\"Yesterday around 7 in the evening\",\"confidence\":0.9},\"amount_inr\":{\"value\":250000.0,\"source_quote\":\"two and a half lakh\",\"confidence\":0.95},\"channel\":null,\"victim_bank\":null,\"victim_account_hint\":null,\"transaction_id\":null,\"beneficiary_upi_id\":null,\"beneficiary_account\":null,\"beneficiary_phone\":null,\"beneficiary_bank\":null,\"scam_type\":{\"value\":\"digital_arrest\",\"source_quote\":\"digital arrest\",\"confidence\":0.98},\"narrative\":{\"value\":\"Caller impersonating CBI claimed a narcotics parcel was seized in victim name, placed victim under digital arrest.\",\"source_quote\":\"digital arrest\",\"confidence\":0.9},\"evidence_available\":null}",
+  "call_start": "2026-10-27T15:00:00+05:30",
+  "error": null
+ },
+ {
+  "speaker": "Operator",
+  "text": "And the money?",
+  "ticket_json": "{\"complainant_name\":{\"value\":\"Meera Iyer\",\"source_quote\":\"my name is Meera Iyer\",\"confidence\":0.98},\"complainant_mobile\":null,\"incident_datetime\":{\"value\":\"2026-10-26T19:00:00+05:30\",\"source_quote\":\"Yesterday around 7 in the evening\",\"confidence\":0.9},\"amount_inr\":{\"value\":250000.0,\"source_quote\":\"two and a half lakh\",\"confidence\":0.95},\"channel\":null,\"victim_bank\":null,\"victim_account_hint\":null,\"transaction_id\":null,\"beneficiary_upi_id\":null,\"beneficiary_account\":null,\"beneficiary_phone\":null,\"beneficiary_bank\":null,\"scam_type\":{\"value\":\"digital_arrest\",\"source_quote\":\"digital arrest\",\"confidence\":0.98},\"narrative\":{\"value\":\"Caller impersonating CBI claimed a narcotics parcel was seized in victim name, placed victim under digital arrest.\",\"source_quote\":\"digital arrest\",\"confidence\":0.9},\"evidence_available\":null}",
+  "call_start": "2026-10-27T15:00:00+05:30",
+  "error": null
+ },
+ {
+  "speaker": "Victim",
+  "text": "He forced me to transfer 2.5 lakh rupees through net banking from my ICICI Bank account.",
+  "ticket_json": "{\"complainant_name\":{\"value\":\"Meera Iyer\",\"source_quote\":\"my name is Meera Iyer\",\"confidence\":0.98},\"complainant_mobile\":null,\"incident_datetime\":{\"value\":\"2026-10-26T19:00:00+05:30\",\"source_quote\":\"Yesterday around 7 in the evening\",\"confidence\":0.9},\"amount_inr\":{\"value\":250000.0,\"source_quote\":\"2.5 lakh rupees\",\"confidence\":0.98},\"channel\":{\"value\":\"netbanking\",\"source_quote\":\"net banking\",\"confidence\":0.95},\"victim_bank\":{\"value\":\"ICICI Bank\",\"source_quote\":\"ICICI Bank\",\"confidence\":0.95},\"victim_account_hint\":null,\"transaction_id\":null,\"beneficiary_upi_id\":null,\"beneficiary_account\":null,\"beneficiary_phone\":null,\"beneficiary_bank\":null,\"scam_type\":{\"value\":\"digital_arrest\",\"source_quote\":\"digital arrest\",\"confidence\":0.98},\"narrative\":{\"value\":\"Impersonator claimed narcotics parcel, placed victim under digital arrest, forced netbanking transfer of Rs 2.5 lakh from ICICI.\",\"source_quote\":\"digital arrest\",\"confidence\":0.9},\"evidence_available\":null}",
+  "call_start": "2026-10-27T15:00:00+05:30",
+  "error": null
+ },
+ {
+  "speaker": "Operator",
+  "text": "Do you know where the money went?",
+  "ticket_json": "{\"complainant_name\":{\"value\":\"Meera Iyer\",\"source_quote\":\"my name is Meera Iyer\",\"confidence\":0.98},\"complainant_mobile\":null,\"incident_datetime\":{\"value\":\"2026-10-26T19:00:00+05:30\",\"source_quote\":\"Yesterday around 7 in the evening\",\"confidence\":0.9},\"amount_inr\":{\"value\":250000.0,\"source_quote\":\"2.5 lakh rupees\",\"confidence\":0.98},\"channel\":{\"value\":\"netbanking\",\"source_quote\":\"net banking\",\"confidence\":0.95},\"victim_bank\":{\"value\":\"ICICI Bank\",\"source_quote\":\"ICICI Bank\",\"confidence\":0.95},\"victim_account_hint\":null,\"transaction_id\":null,\"beneficiary_upi_id\":null,\"beneficiary_account\":null,\"beneficiary_phone\":null,\"beneficiary_bank\":null,\"scam_type\":{\"value\":\"digital_arrest\",\"source_quote\":\"digital arrest\",\"confidence\":0.98},\"narrative\":{\"value\":\"Impersonator claimed narcotics parcel, placed victim under digital arrest, forced netbanking transfer of Rs 2.5 lakh from ICICI.\",\"source_quote\":\"digital arrest\",\"confidence\":0.9},\"evidence_available\":null}",
+  "call_start": "2026-10-27T15:00:00+05:30",
+  "error": null
+ },
+ {
+  "speaker": "Victim",
+  "text": "The account number he gave was 50100098765432 in HDFC Bank.",
+  "ticket_json": "{\"complainant_name\":{\"value\":\"Meera Iyer\",\"source_quote\":\"my name is Meera Iyer\",\"confidence\":0.98},\"complainant_mobile\":null,\"incident_datetime\":{\"value\":\"2026-10-26T19:00:00+05:30\",\"source_quote\":\"Yesterday around 7 in the evening\",\"confidence\":0.9},\"amount_inr\":{\"value\":250000.0,\"source_quote\":\"2.5 lakh rupees\",\"confidence\":0.98},\"channel\":{\"value\":\"netbanking\",\"source_quote\":\"net banking\",\"confidence\":0.95},\"victim_bank\":{\"value\":\"ICICI Bank\",\"source_quote\":\"ICICI Bank\",\"confidence\":0.95},\"victim_account_hint\":null,\"transaction_id\":null,\"beneficiary_upi_id\":null,\"beneficiary_account\":{\"value\":\"50100098765432\",\"source_quote\":\"50100098765432\",\"confidence\":0.98},\"beneficiary_phone\":null,\"beneficiary_bank\":{\"value\":\"HDFC Bank\",\"source_quote\":\"HDFC Bank\",\"confidence\":0.95},\"scam_type\":{\"value\":\"digital_arrest\",\"source_quote\":\"digital arrest\",\"confidence\":0.98},\"narrative\":{\"value\":\"Victim coerced under digital arrest to transfer Rs 2.5L from ICICI to HDFC a/c 50100098765432.\",\"source_quote\":\"digital arrest\",\"confidence\":0.9},\"evidence_available\":null}",
+  "call_start": "2026-10-27T15:00:00+05:30",
+  "error": null
+ },
+ {
+  "speaker": "Operator",
+  "text": "Do you have the transaction reference?",
+  "ticket_json": "{\"complainant_name\":{\"value\":\"Meera Iyer\",\"source_quote\":\"my name is Meera Iyer\",\"confidence\":0.98},\"complainant_mobile\":null,\"incident_datetime\":{\"value\":\"2026-10-26T19:00:00+05:30\",\"source_quote\":\"Yesterday around 7 in the evening\",\"confidence\":0.9},\"amount_inr\":{\"value\":250000.0,\"source_quote\":\"2.5 lakh rupees\",\"confidence\":0.98},\"channel\":{\"value\":\"netbanking\",\"source_quote\":\"net banking\",\"confidence\":0.95},\"victim_bank\":{\"value\":\"ICICI Bank\",\"source_quote\":\"ICICI Bank\",\"confidence\":0.95},\"victim_account_hint\":null,\"transaction_id\":null,\"beneficiary_upi_id\":null,\"beneficiary_account\":{\"value\":\"50100098765432\",\"source_quote\":\"50100098765432\",\"confidence\":0.98},\"beneficiary_phone\":null,\"beneficiary_bank\":{\"value\":\"HDFC Bank\",\"source_quote\":\"HDFC Bank\",\"confidence\":0.95},\"scam_type\":{\"value\":\"digital_arrest\",\"source_quote\":\"digital arrest\",\"confidence\":0.98},\"narrative\":{\"value\":\"Victim coerced under digital arrest to transfer Rs 2.5L from ICICI to HDFC a/c 50100098765432.\",\"source_quote\":\"digital arrest\",\"confidence\":0.9},\"evidence_available\":null}",
+  "call_start": "2026-10-27T15:00:00+05:30",
+  "error": null
+ },
+ {
+  "speaker": "Victim",
+  "text": "Yes, the UTR is 412398765432. My mobile number is 9000022222.",
+  "ticket_json": "{\"complainant_name\":{\"value\":\"Meera Iyer\",\"source_quote\":\"my name is Meera Iyer\",\"confidence\":0.98},\"complainant_mobile\":{\"value\":\"9000022222\",\"source_quote\":\"9000022222\",\"confidence\":0.98},\"incident_datetime\":{\"value\":\"2026-10-26T19:00:00+05:30\",\"source_quote\":\"Yesterday around 7 in the evening\",\"confidence\":0.9},\"amount_inr\":{\"value\":250000.0,\"source_quote\":\"2.5 lakh rupees\",\"confidence\":0.98},\"channel\":{\"value\":\"netbanking\",\"source_quote\":\"net banking\",\"confidence\":0.95},\"victim_bank\":{\"value\":\"ICICI Bank\",\"source_quote\":\"ICICI Bank\",\"confidence\":0.95},\"victim_account_hint\":null,\"transaction_id\":{\"value\":\"412398765432\",\"source_quote\":\"412398765432\",\"confidence\":0.98},\"beneficiary_upi_id\":null,\"beneficiary_account\":{\"value\":\"50100098765432\",\"source_quote\":\"50100098765432\",\"confidence\":0.98},\"beneficiary_phone\":null,\"beneficiary_bank\":{\"value\":\"HDFC Bank\",\"source_quote\":\"HDFC Bank\",\"confidence\":0.95},\"scam_type\":{\"value\":\"digital_arrest\",\"source_quote\":\"digital arrest\",\"confidence\":0.98},\"narrative\":{\"value\":\"Victim coerced under digital arrest to transfer Rs 2.5L from ICICI to HDFC a/c 50100098765432. UTR: 412398765432.\",\"source_quote\":\"digital arrest\",\"confidence\":0.9},\"evidence_available\":null}",
+  "call_start": "2026-10-27T15:00:00+05:30",
+  "error": null
+ },
+ {
+  "speaker": "Operator",
+  "text": "Do you have any proof?",
+  "ticket_json": "{\"complainant_name\":{\"value\":\"Meera Iyer\",\"source_quote\":\"my name is Meera Iyer\",\"confidence\":0.98},\"complainant_mobile\":{\"value\":\"9000022222\",\"source_quote\":\"9000022222\",\"confidence\":0.98},\"incident_datetime\":{\"value\":\"2026-10-26T19:00:00+05:30\",\"source_quote\":\"Yesterday around 7 in the evening\",\"confidence\":0.9},\"amount_inr\":{\"value\":250000.0,\"source_quote\":\"2.5 lakh rupees\",\"confidence\":0.98},\"channel\":{\"value\":\"netbanking\",\"source_quote\":\"net banking\",\"confidence\":0.95},\"victim_bank\":{\"value\":\"ICICI Bank\",\"source_quote\":\"ICICI Bank\",\"confidence\":0.95},\"victim_account_hint\":null,\"transaction_id\":{\"value\":\"412398765432\",\"source_quote\":\"412398765432\",\"confidence\":0.98},\"beneficiary_upi_id\":null,\"beneficiary_account\":{\"value\":\"50100098765432\",\"source_quote\":\"50100098765432\",\"confidence\":0.98},\"beneficiary_phone\":null,\"beneficiary_bank\":{\"value\":\"HDFC Bank\",\"source_quote\":\"HDFC Bank\",\"confidence\":0.95},\"scam_type\":{\"value\":\"digital_arrest\",\"source_quote\":\"digital arrest\",\"confidence\":0.98},\"narrative\":{\"value\":\"Victim coerced under digital arrest to transfer Rs 2.5L from ICICI to HDFC a/c 50100098765432. UTR: 412398765432.\",\"source_quote\":\"digital arrest\",\"confidence\":0.9},\"evidence_available\":null}",
+  "call_start": "2026-10-27T15:00:00+05:30",
+  "error": null
+ },
+ {
+  "speaker": "Victim",
+  "text": "I have screenshots of the video call and the bank SMS.",
+  "ticket_json": "{\"complainant_name\":{\"value\":\"Meera Iyer\",\"source_quote\":\"my name is Meera Iyer\",\"confidence\":0.98},\"complainant_mobile\":{\"value\":\"9000022222\",\"source_quote\":\"9000022222\",\"confidence\":0.98},\"incident_datetime\":{\"value\":\"2026-10-26T19:00:00+05:30\",\"source_quote\":\"Yesterday around 7 in the evening\",\"confidence\":0.9},\"amount_inr\":{\"value\":250000.0,\"source_quote\":\"2.5 lakh rupees\",\"confidence\":0.98},\"channel\":{\"value\":\"netbanking\",\"source_quote\":\"net banking\",\"confidence\":0.95},\"victim_bank\":{\"value\":\"ICICI Bank\",\"source_quote\":\"ICICI Bank\",\"confidence\":0.95},\"victim_account_hint\":null,\"transaction_id\":{\"value\":\"412398765432\",\"source_quote\":\"412398765432\",\"confidence\":0.98},\"beneficiary_upi_id\":null,\"beneficiary_account\":{\"value\":\"50100098765432\",\"source_quote\":\"50100098765432\",\"confidence\":0.98},\"beneficiary_phone\":null,\"beneficiary_bank\":{\"value\":\"HDFC Bank\",\"source_quote\":\"HDFC Bank\",\"confidence\":0.95},\"scam_type\":{\"value\":\"digital_arrest\",\"source_quote\":\"digital arrest\",\"confidence\":0.98},\"narrative\":{\"value\":\"Victim coerced under digital arrest to transfer Rs 2.5L from ICICI to HDFC a/c 50100098765432. UTR: 412398765432.\",\"source_quote\":\"digital arrest\",\"confidence\":0.9},\"evidence_available\":{\"value\":[\"screenshots of the video call\",\"bank SMS\"],\"source_quote\":\"screenshots of the video call\",\"confidence\":0.95}}",
+  "call_start": "2026-10-27T15:00:00+05:30",
+  "error": null
+ }
+]
